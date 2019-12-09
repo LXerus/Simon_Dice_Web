@@ -8,16 +8,17 @@ const ULTIMO_NIVEL = 10;
 class Juego {
     constructor() {
         this.inicializar = this.inicializar.bind(this);
-        this.inicializar();
-        this.generarSecuencia();
+        this.inicializar();        
         setTimeout(this.siguienteNivel(), 500);
     }
 
     inicializar() {
-        this.siguienteNivel = this.siguienteNivel.bind(this)
-        this.elegirColor = this.elegirColor.bind(this)
-        this.toggleBtnEmpezar()
+        this.siguienteNivel = this.siguienteNivel.bind(this);
+        this.elegirColor = this.elegirColor.bind(this);
+        this.toggleBtnEmpezar();
+        this.generarSecuencia();
         this.nivel = 1;
+        this.subNivel = 0;
         this.colores = {
             celeste,
             violeta,
@@ -35,14 +36,14 @@ class Juego {
     }
 
     generarSecuencia() {
-        this.secuencia = new Array(ULTIMO_NIVEL).fill(0).map(n => Math.floor(Math.random() * 4))
+        this.secuencia = new Array(ULTIMO_NIVEL).fill(0).map(n => Math.floor(Math.random() * 4));
     }
 
     siguienteNivel() {
         this.subNivel = 0;
         /* debugger */
-        this.iluminarSecuencia()
-        this.agregarEventosclick()
+        this.iluminarSecuencia();
+        this.agregarEventosclick();
     }
 
     transformarNumeroAColor(numero) {
@@ -106,13 +107,14 @@ class Juego {
         const numeroColor = this.transformarColorANumero(nombreColor);
         this.iluminarColor(nombreColor);
         if (numeroColor === this.secuencia[this.subNivel]) {
-            this.subNivel++
+            this.subNivel++;
             if (this.subNivel === this.nivel) {
                 /* debugger */
-                this.nivel++
+                this.nivel++;
                 this.eliminarElementosClick();
+                this.generarSecuencia();
                 if (this.nivel === (ULTIMO_NIVEL + 1)) {
-                    this.ganoElJuego()
+                    this.ganoElJuego();
                 } else {
                     setTimeout(() => {
                         this.siguienteNivel();
@@ -120,25 +122,25 @@ class Juego {
                 }
             }
         } else {
-            this.perdioElJuego()
+            this.perdioElJuego();
         }
     }
 
     ganoElJuego() {
         swal(':)', 'Felicitaciones, ganaste el juego!', 'success!')
             .then((result) => {
-                this.inicializar()
+                this.inicializar();
             })
     }
 
     perdioElJuego() {
         swal(':(', 'Lo lamentamos, perdiste el juego!', 'fail!')
             .then((result) => {
-                this.inicializar()
+                this.inicializar();
             })
     }
 }
 
 function empezarJuego() {
-    window.juego = new Juego()
+    window.juego = new Juego();
 }

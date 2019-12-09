@@ -1,78 +1,93 @@
 body {
-    margin: 0;
-    background: #dedede;
-    display: flex;
-    align-items: center;
-    height: 100vh;
-  }
+  margin: 0;
+  background: #dedede;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 2px;
+}  
 
-  .gameboard {
-    height: 100vh;
-    width: 100vh;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto;
-    max-height: 60vh;
-    max-width: 60vh;
-  }
+.gameboard {
+  height: 100vh;
+  width: 100vh;    
+  overflow: hidden;
+  margin: 0 auto;
+  max-height: 60vh;
+  max-width: 60vh;
+  box-shadow: 1px 1px 5px 5px rgba(0,0,0,0.25);
+  border: 5px solid transparent;
+  border-radius: 50%;    
+ /*  border-image: url("../images/spiral.gif") 15 / 15px round;   */
+ }
 
-  .color {
-    width: 50%;
-    height: 50%;
-    display: inline-block;
-  }
+.outer-border{
+  display: flex;
+  align-items: center;    
+  justify-content: center;
+  height: 75vh;
+  width: 75vh;  
+  background-image: url("../images/spiral.gif");
+  border-radius: 50%;
+}
 
-  .left {
-    float: left;
-  }
+.color {
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+}
 
-  .right {
-    float: left;
-  }
+.left {
+  float: left;
+}
 
-  .celeste {
-    background: #22a6b3;
-  }
+.right {
+  float: left;
+}
 
-  .celeste.light {
-    background: #7ed6df;
-  }
+.celeste {
+  background: #22a6b3;
+}
 
-  .violeta {
-    background: #be2edd;
-  }
+.celeste.light {
+  background: #7ed6df;
+}
 
-  .violeta.light {
-    background: #e056fd;
-  }
+.violeta {
+  background: #be2edd;
+}
 
-  .naranja {
-    background: #f0932b;
-  }
+.violeta.light {
+  background: #e056fd;
+}
 
-  .naranja.light {
-    background: #ffbe76;
-  }
+.naranja {
+  background: #f0932b;
+}
 
-  .verde {
-    background: #6ab04c;
-  }
+.naranja.light {
+  background: #ffbe76;
+}
 
-  .verde.light {
-    background: #badc58;
-  }
+.verde {
+  background: #6ab04c;
+}
 
-  .btn-start {
-    width: 400px;
-    height: 100px;
-    background: #ecf0f1;
-    color: #2c3e50;
-    font-size: 2.5rem;
-    position: absolute;
-    top: calc(50% - 50px);
-    left: calc(50% - 200px);
-  }
+.verde.light {
+  background: #badc58;
+}
 
-  .hide {
-    display: none;
-  }
+.btn-start {
+  width: 400px;
+  height: 100px;
+  background: #ecf0f1;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 200px);
+}
+
+.hide {
+  display: none;
+}
