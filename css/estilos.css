@@ -7,6 +7,9 @@ body {
   height: 100vh;
   padding: 2px;
   background-image: url("../images/retro-arcade-neon.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }  
 
 .gameboard {
@@ -19,7 +22,6 @@ body {
   box-shadow: 1px 1px 5px 5px rgba(0,0,0,0.25);
   border: 5px solid transparent;
   border-radius: 50%;    
- /*  border-image: url("../images/spiral.gif") 15 / 15px round;   */
  }
 
 .outer-border{
@@ -29,6 +31,9 @@ body {
   height: 75vh;
   width: 75vh;  
   background-image: url("../images/spiral.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   border-radius: 50%;
 }
 
@@ -47,7 +52,7 @@ body {
 }
 
 .celeste {
-  background: #22a6b3;
+  background: #30d8c0;
 }
 
 .celeste.light {
@@ -55,27 +60,27 @@ body {
 }
 
 .violeta {
-  background: #be2edd;
+  background: #9000ff;
 }
 
 .violeta.light {
-  background: #e056fd;
+  background: #b75cfd;
 }
 
 .naranja {
-  background: #f0932b;
+  background: #f03060;
 }
 
 .naranja.light {
-  background: #ffbe76;
+  background: #f05b80;
 }
 
 .verde {
-  background: #6ab04c;
+  background: #30ff00;
 }
 
 .verde.light {
-  background: #badc58;
+  background: #91fb78;
 }
 
 .btn-start {
