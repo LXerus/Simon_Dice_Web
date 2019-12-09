@@ -6,6 +6,7 @@ body {
   justify-content: center;
   height: 100vh;
   padding: 2px;
+  background-image: url("../images/retro-arcade-neon.jpg");
 }  
 
 .gameboard {
